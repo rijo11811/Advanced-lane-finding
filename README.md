@@ -124,12 +124,12 @@ Here's a [link to my video result](./output_video/project_video.mp4)
 
 Here I'll talk about the approach I took, what techniques I used, what worked and why, where the pipeline might fail and how I might improve it if I were going to pursue this project further. 
 
-In order to approach the problem in a more organized way, I decided to use oops concept for a pipeline which detects lane from the video. This was very helpful for resolving errors. I created two classes, frame and lane, which have a relationship between them. The reused the code from the above image pipeline in the class frame. In order to keep track of values which are changed across different frames I used several class variables. 
+In order to approach the problem in a more organized way, I decided to use oops concept for a pipeline which detects lane from the video. This was very helpful for resolving errors. I created two classes, frame and lane, which have a relationship between them. In order to keep track of values, which are changed across different frames I used several class variables. 
 
 To smooth out the lane values I used an approach which calculates the average for the same from last n frames.
 
 I included a logic which reuses the coefficients of the fit calculated in the previous frame to predict the new lane points.
-To make sure that this feature is ket in check, I also included a sanity check logic which checked for anomalies in the detected lanes.
+To make sure that this feature is kept in check, I also included a sanity check logic which checked for anomalies in the detected lanes.
 
 The sanity check looked for anomalies in n consecutive frames and would trigger a more cautious lane detection.
 
